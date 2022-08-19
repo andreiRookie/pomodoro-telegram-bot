@@ -56,7 +56,7 @@ public class PomodoroBot extends TelegramLongPollingBot {
         userTimerRepository.put((new UserTimer(workTime, WORK)), update.getMessage().getChatId());
         System.out.printf("[%s] Collection size %d", Instant.now().toString(), userTimerRepository.size());
         userTimerRepository.put((new UserTimer(breakTime, TimerType.BREAK)), update.getMessage().getChatId());
-        sendMsg(update.getMessage().getChatId(), "Timer started");
+        sendMsg(update.getMessage().getChatId(), "Timer started\nLet's work");
     }
 
     public void checkTimer() throws InterruptedException{
